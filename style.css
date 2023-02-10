@@ -1,0 +1,53 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(24, 24, 24);
+}
+.box{
+height: 500px;
+width: 400px;
+border-radius: 30px;
+background-color: black;
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+}
+.box::after{
+content: "";
+height: 700px;
+width: 700px;
+position: absolute;
+background-image:conic-gradient(transparent,transparent,transparent,#00ccff);
+animation: rotate 4s linear  infinite ;
+}
+@keyframes rotate{
+    0%{
+    transform: rotate(0);
+    }
+    100%{
+    transform: rotate(360deg);
+    }
+}
+
+.box::before{
+content: "";
+height: 700px;
+width: 700px;
+position: absolute;
+background-image:conic-gradient(transparent,transparent,transparent,#ac1dd8);
+animation: rotate 4s linear  infinite ;
+animation-delay: -2s;
+}
+.box span{
+    background-image: url("https://mercomindia.s3.ap-south-1.amazonaws.com/wp-content/uploads/2022/08/Award-annouce-bg-Centre-alignment-01-for-web-1.jpg");
+    height: 490px;
+    width: 390px;
+    position: absolute;
+    z-index: 1;
+    background-color: black;
+    border-radius: 30px;
+}
